@@ -14,7 +14,7 @@ redirect_from: resources
 
 ## WTF ist nostr?
 
-nostr ist neu und verwirrend, aber auch ziemlich cool. Es ist **das einfachste offene Protokoll, das in der Lage ist, eine
+nostr ist neu und verwirrend, aber auch ziemlich cool. Es ist **das einfachste offene Protokoll, das in der Lage ist, ein
 zensurresistentes globales "soziales" Netzwerk** ein für alle Mal zu schaffen.
 
 - Es verlässt sich nicht auf einen vertrauenswürdigen zentralen Server und ist daher widerstandsfähig.
@@ -31,7 +31,7 @@ zensurresistentes globales "soziales" Netzwerk** ein für alle Mal zu schaffen.
 
 Das Design von nostr ist sehr einfach:
 
-- Es besteht aus zwei Komponenten: **Clients** und **Relays**. Jeder Benutzer betreibt einen Client. Jeder kann ein Relay Server betreiben.
+- Es besteht aus zwei Komponenten: **Clients** und **Relays**. Jeder Benutzer betreibt einen Client. Jeder kann einen Relay Server betreiben.
 - Jeder Nutzer wird durch einen öffentlichen Schlüssel identifiziert und jeder Beitrag wird signiert. Jeder Client validiert dann diese Signaturen.
 - Clients holen Daten von Relays ihrer Wahl ab und veröffentlichen Daten an andere Relays ihrer Wahl. Ein Relay spricht nicht mit einem anderen Relay, sondern nur direkt mit den Clients.
 
@@ -40,23 +40,23 @@ Um nostr zu verwenden, benötigst du einen [key](#keys) und einen [client](#clie
 - Jeder hat einen Client. Das kann ein nativer Client oder ein Web-Client usw. sein. 
 - Um etwas zu veröffentlichen, schreibst du einen Beitrag, signierst ihn mit deinem Schlüssel und sendest ihn an mehrere Relays (Server, die von jemand anderem oder von dir selber gehostet werden). 
 - Um Aktualisierungen von anderen Personen zu erhalten, fragst du mehrere Relays ab, ob sie etwas über diese anderen Personen wissen. 
-- Jeder kann ein Relay betreiben. Ein Relay ist sehr einfach und dumm. Er tut nichts anderes, als Beiträge von einigen Leuten anzunehmen und an andere weiterzuleiten.
+- Jeder kann ein Relay betreiben. Ein Relay ist sehr einfach und dumm. Er tut nichts anderes, als Beiträge von einigen Leuten anzunehmen und an Andere weiterzuleiten.
 - Relays müssen nicht vertrauenswürdig sein. Signaturen werden auf der Client-Seite verifiziert.
 
 ## Schlüssel
 
-Deine Schlüssel sind deine Identität. Du kannst dich deinen öffentlichen Schlüssel (`npub...`) als
+Deine Schlüssel sind deine Identität. Du kannst dir deinen öffentlichen Schlüssel (`npub...`) als
 deinen Benutzernamen und deinen privaten Schlüssel (`nsec...`) als dein Passwort vorstellen. 
 
 Zwei kurze Hinweise:
 - ⚠️ **DEN PRIVATEN SCHLÜSSEL NICHT IN WEBSEITEN EINFÜGEN**[^fn-xss] ⚠️
 - Bewahre deinen Schlüssel sicher auf und gib ihn nicht weiter
 
-Schlüssel gibt es in zwei Formaten, `hex` und dem oben erwähnten npub/nsec. Du kannst ein
+Schlüssel gibt es in zwei Formaten, `hex` und dem oben erwähnten npub/nsec. Du kannst 
 ein [Schlüsselkonvertierungsprogramm](https://github.com/rot13maxi/key-convertr)[^fn-keys] verwenden, um
 zwischen den beiden Formaten zu konvertieren.
 
-[^fn-keys]: Es gibt auch das Tool [damus.io/key](https://damus.io/key/), aber verwende es NICHT für die Konvertierung privater Schlüssel. Füge deinen privaten Schlüssel nie in Webseiten ein. Tu das es einfach nicht.
+[^fn-keys]: Es gibt auch das Tool [damus.io/key](https://damus.io/key/), aber verwende es NICHT für die Konvertierung privater Schlüssel. Füge deinen privaten Schlüssel nie in Webseiten ein. Tu es einfach nicht.
 
 [^fn-xss]: Du musst natürlich dem Betreiber der Website vertrauen und einige Clients sind anfällig für XSS-Angriffe. Viele Leute wurden bereits gerekt und mussten ihre nostr Identität deswegen neu aufbauen.
 
@@ -97,7 +97,7 @@ Amethyst ist nun im Play Store verfügbar. Nosky[^nosky] und Nostros[^nostros] b
 
 Da gibt es auch noch die [Nostr Konsole](https://github.com/vishalxl/nostr_console),
 [noscl](https://github.com/fiatjaf/noscl), und
-[nostr-commander](https://github.com/8go/nostr-commander-rs) wenn dir die kommandozeile besser gefällt.
+[nostr-commander](https://github.com/8go/nostr-commander-rs) wenn dir die Kommandozeile besser gefällt.
 
 
 ## Relays
@@ -109,7 +109,7 @@ viele Relays und du kannst dein eigenen betreiben.
 - [nostr.watch](http://nostr.watch/)
 - [nostr.info](https://nostr.info/relays/)
 
-Betreibe dein eigener:
+Betreibe deinen eigenen:
 
 - [Einrichten eines Nostr-Relay-Servers in weniger als 5 Minuten](https://andreneves.xyz/p/set-up-a-nostr-relay-server-in-under)[^fn-fork]
 
@@ -121,6 +121,7 @@ nostr kann mehr als nur soziale Medien :)
 
 - [Sendstr](https://sendstr.com/) - gemeinsame Zwischenablage zwischen Geräten über Nostr
 - [nosbin](https://nosbin.com/) - pastebin über nostr
+- [nostrnet](https://nostrnet.work) - Ein Dashboard für nostr Apps
 
 
 ## Spiele
